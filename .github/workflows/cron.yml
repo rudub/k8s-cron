@@ -26,6 +26,9 @@ jobs:
       - name: Create cronjob
         run: kubectl create -f cron-job.yaml
         
+      - name: sleep
+        run: sleep 30s
+        
       # Runs a set of commands using the runners shell
-      - name: Get cronjob
-        run: kubectl get cronjob --watch
+      - name: Get deploy
+        run: kubectl get deploy
