@@ -22,7 +22,10 @@ jobs:
         
       - name: create deployment
         run: kubectl apply -f deploy-to-minikube.yaml
-
+        
+      - name: Create cronjob
+        run: kubectl create -f cron-job.yaml
+        
       # Runs a set of commands using the runners shell
-      - name: Get deployment
-        run: kubectl get deploy
+      - name: Get cronjob
+        run: kubectl get cronojb
