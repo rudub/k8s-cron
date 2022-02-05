@@ -21,7 +21,7 @@ jobs:
         uses: medyagh/setup-minikube@master
         
       - name: create deployment
-        run: kubectl apply -f deploy-to-minikube.yml
+        run: kubectl apply -f deploy-to-minikube.yaml
 
       # Runs a set of commands using the runners shell
       - name: Get deployment
