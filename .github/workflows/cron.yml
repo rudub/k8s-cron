@@ -23,6 +23,9 @@ jobs:
       - name: create deployment
         run: kubectl apply -f nginx.yaml
         
+      - name: execute shell script
+        run: bash -x cron.sh blue
+        
       - name: sleep
         run: sleep 60s
         
