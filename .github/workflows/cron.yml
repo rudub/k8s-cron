@@ -23,8 +23,8 @@ jobs:
       - name: create deployment
         run: kubectl apply -f deploy-to-minikube.yaml
         
-      - name: Create cronjob
-        run: kubectl create -f cron-job.yaml
+      - name: execute shell script
+        run: bash -x cron.sh
         
       - name: sleep
         run: sleep 30s
