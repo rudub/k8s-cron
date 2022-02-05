@@ -15,5 +15,5 @@ spec:
             command:
             - /bin/sh
             - -c
-            - date; kubectl delete deploy example
+            - kubectl get deploy
           restartPolicy: OnFailure
