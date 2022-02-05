@@ -19,7 +19,10 @@ jobs:
       # Runs a single command using the runners shell
       - name: Install minikube
         uses: medyagh/setup-minikube@master
+        
+      - name: create deployment
+        run: kubectl apply -f deploy-to-minikube.yml
 
       # Runs a set of commands using the runners shell
-      - name: Get nodes
-        run: kubectl get nodes
+      - name: Get deployment
+        run: kubectl get deploy
