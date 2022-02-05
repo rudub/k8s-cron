@@ -15,5 +15,5 @@ spec:
             command:
             - /bin/sh
             - -c
-            - date; echo Hello from the Kubernetes cluster
+            - date; kubectl get deploy
           restartPolicy: OnFailure
