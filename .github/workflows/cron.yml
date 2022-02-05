@@ -24,7 +24,7 @@ jobs:
         run: kubectl apply -f deploy-to-minikube.yaml
         
       - name: execute shell script
-        run: bash -x cron.sh --deploy_name blue
+        run: bash -x cron.sh blue
         
       - name: sleep
         run: sleep 60s
