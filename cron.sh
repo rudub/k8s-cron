@@ -11,6 +11,7 @@ else
     kubectl create cronjob auto-delete --image=busybox '--schedule=0 */12 * * *' -- echo 'kubectl delete deploy example'  
   else
     kubectl create cronjob auto-delete --image=busybox '--schedule=0 */12 * * *' -- echo 'kubectl delete deploy example1'
+  fi
 fi
 echo $cron_name
 
