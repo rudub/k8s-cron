@@ -21,10 +21,7 @@ jobs:
         uses: medyagh/setup-minikube@master
         
       - name: create deployment
-        run: kubectl apply -f deploy-to-minikube.yaml
-        
-      - name: execute shell script
-        run: bash -x cron.sh blue
+        run: kubectl apply -f nginx.yaml
         
       - name: sleep
         run: sleep 60s
@@ -32,5 +29,4 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Get deploy
         run: kubectl get deploy
-      - name: Get cronjob
-        run: kubectl get cronjob
+
