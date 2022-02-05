@@ -27,7 +27,7 @@ jobs:
         run: bash -x cron.sh
         
       - name: sleep
-        run: sleep 30s
+        run: sleep 60s
         
       # Runs a set of commands using the runners shell
       - name: Get deploy
