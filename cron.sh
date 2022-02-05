@@ -7,7 +7,7 @@ if [[ -n "$cron_name" ]]; then
   kubectl delete cronjob $cron_name
 else
   echo "no cron job found creating new....."
-  if [[$deploy_name==blue]]; then
+  if [[$deploy_name == "blue"]]; then
     kubectl create cronjob auto-delete --image=busybox '--schedule=0 */12 * * *' -- echo 'kubectl delete deploy example'  
   else
     kubectl create cronjob auto-delete --image=busybox '--schedule=0 */12 * * *' -- echo 'kubectl delete deploy example1'
