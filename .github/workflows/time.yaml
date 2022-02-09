@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: get current time
-        run: date
+        run: date -d "+720 minutes" +'%H:%M'
