@@ -3,9 +3,11 @@ on:
   push:
     branches: [main]
     
- jobs:
-   job1:
-     runs-on: ubuntu-latest
-     steps:
-       - name: get current time
-         run: date
+  workflow_dispatch:
+    
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get current time
+        run: date
