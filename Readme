@@ -1,0 +1,5 @@
+This GitHub workflow is primarily focused on setting up a Minikube environment to remove unsed deployment from K8s with blue-green strategy, the github action performing below steps:
+- deploying a Kubernetes resource
+- executing a shell script and retrieving information about Kubernetes deployments
+- Shell script executes and delete the k8s deployment based on active color deployment.
+- It is triggered when changes are pushed to or a pull request is created for the "main" branch, and it can also be manually triggered through the GitHub Actions UI.
